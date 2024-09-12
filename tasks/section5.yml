@@ -536,7 +536,7 @@
     user: "{{ ansible_user }}"
     key: "{{ cis_ubuntu2204_rule_5_1_24_ssh_pub_key }}"
     state: present
-    exclusive: true
+    exclusive: false
   when:
     - cis_ubuntu2204_rule_5_1_24
     - cis_ubuntu2204_rule_5_1_24_ssh_pub_key is defined
