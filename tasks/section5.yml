@@ -1019,7 +1019,7 @@
   ansible.builtin.lineinfile:
     dest: /etc/security/pwquality.conf
     regexp: "{{ cis_ubuntu2204_regex_base_search }}dictcheck{{ cis_ubuntu2204_regex_base_search_equals }}"
-    line: "# dictcheck = 1"
+    line: "dictcheck = 1"
     state: present
     create: true
     owner: root
@@ -1036,7 +1036,7 @@
   ansible.builtin.lineinfile:
     dest: /etc/security/pwquality.conf
     regexp: "{{ cis_ubuntu2204_regex_base_search }}enforcing{{ cis_ubuntu2204_regex_base_search_equals }}"
-    line: "# enforcing = 1"
+    line: "enforcing = 1"
     state: present
     create: true
     owner: root
@@ -1624,7 +1624,7 @@
   ansible.builtin.lineinfile:
     dest: "{{ item.dest }}"
     regexp: "{{ cis_ubuntu2204_regex_base_search }}{{ item.field }}"
-    line: "{{ item.field }} 0027"
+    line: "{{ item.field }} 027"
     state: present
     create: true
     owner: root
