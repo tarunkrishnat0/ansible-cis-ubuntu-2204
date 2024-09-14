@@ -162,7 +162,7 @@
   ansible.builtin.lineinfile:
     dest: /etc/systemd/journald.conf
     regexp: "{{ cis_ubuntu2204_regex_base_search }}ForwardToSyslog{{ cis_ubuntu2204_regex_base_search_equals }}"
-    line: "#ForwardToSyslog=no"
+    line: "ForwardToSyslog=no"
     state: present
     owner: root
     group: root
