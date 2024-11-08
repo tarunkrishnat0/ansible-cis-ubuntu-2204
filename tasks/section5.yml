@@ -1602,7 +1602,7 @@
   ansible.builtin.lineinfile:
     dest: "{{ item }}"
     regexp: '{{ cis_ubuntu2204_regex_base_search }}readonly\s+TMOUT=\d+\s+;\s+export\sTMOUT'
-    line: "readonly TMOUT=900 ; export TMOUT"
+    line: "readonly TMOUT=1800 ; export TMOUT"
     state: present
     create: true
     owner: root

@@ -407,9 +407,9 @@ cis_ubuntu2204_firewall_rules_exist_open_ports:
 # ssh conf's
 # allows/denies for users/groups (cis_ubuntu2204_rule_5_1_4)
 # 'optional:' 
-cis_ubuntu2204_ssh_allow_users: ubuntu
+cis_ubuntu2204_ssh_allow_users: "{{ ansible_user }}"
 # 'optional:' 
-cis_ubuntu2204_ssh_allow_groups: ubuntu ssh
+cis_ubuntu2204_ssh_allow_groups: "{{ ansible_user }} ssh"
 # 'optional:' 
 cis_ubuntu2204_ssh_deny_users: root
 # 'optional:' 
